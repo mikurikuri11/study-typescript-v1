@@ -24,7 +24,7 @@ type CommonProps = {
 
 type TweetProps = {
   type: "tweet";
-};
+}
 
 type RetweetProps = {
   type: "retweet";
@@ -35,8 +35,8 @@ type PromotionProps = {
   type: "promotion";
 };
 
-type TwitterCardProps = CommonProps &
-  (TweetProps | RetweetProps | PromotionProps);
+type TwitterCardProps = CommonProps & (TweetProps | RetweetProps| PromotionProps);
+
 
 export const TwitterCard = (props: TwitterCardProps) => {
   return (
@@ -53,7 +53,7 @@ export const TwitterCard = (props: TwitterCardProps) => {
         <div className="flex items-center">
           <img
             className="h-11 w-11 rounded-full"
-            src={props.user.image }
+            src={props.user.image}
             alt=""
           />
           <div className="ml-1.5 text-sm leading-tight">
